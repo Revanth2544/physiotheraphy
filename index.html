@@ -109,15 +109,18 @@
   </header>
 
 
-  <section id="hero" class="d-flex align-items-center">
-    <div class="background-image"></div> <!-- Background image container -->
-    <div class="container d-flex">
+  <section data-aos="fade-right" data-aos-delay="80" id="hero" class="d-flex align-items-center">
+    <div data-aos="fade-right" data-aos-delay="950" class="background-image"></div> <!-- Background image container -->
+    <div data-aos="fade-left" data-aos-delay="750" class="background-image1"></div> <!-- Background image container -->
+    <div data-aos="fade-up" data-aos-delay="300" class="background-image2"></div> <!-- Background image container -->
+    <div data-aos="fade-down" data-aos-delay="1100" class="entireDiv d-flex">
       <div class="image-container">
         <img src="assets/img/physiotherapy_-transformed.png" alt="Physiotherapy Image">
       </div>
       <div class="text-container">
         <h2>Welcome</h2>
-        <p>Explore the science behind physiotherapy and unlock the potential for pain relief, injury prevention, and
+        <p style="font-family: Verdana; font-weight:bolder; font-size: 19px;">Explore the science behind physiotherapy
+          and unlock the potential for pain relief, injury prevention, and
           improved physical function.</p>
       </div>
     </div>
@@ -130,15 +133,47 @@
 
   <!-- ======= About Section ======= -->
   <section id="about" class="about section-bg">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
 
       <div class="section-title">
         <h2>About Us</h2>
-        <h3>Let Us Introduce Ourselves
-          <!-- <span>WHO WE ARE</span> -->
-        </h3>
-        <!-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> -->
+        <h3 class="et_pb_text_1">Let Us Introduce Ourselves</h3>
       </div>
+      <script>
+        // Function to reset the transformation
+        function resetTransformation() {
+          var element = document.querySelector('.et_pb_text_1');
+          var initialScale = 8; // Adjust as needed
+          var translateY = 115; // Adjust as needed
+          element.style.transform = 'translateY(' + translateY + 'px) scale3d(' + initialScale + ', ' + initialScale + ', ' + initialScale + ')';
+          element.style.transition = 'transform 0ms'; // Reset transition time to 0ms
+        }
+
+        // Reset transformation when the page reloads
+        window.addEventListener('load', function () {
+          resetTransformation();
+          // Then, attach the scroll event listener
+          window.addEventListener('scroll', function () {
+            var scrollStep = window.scrollY || document.documentElement.scrollTop;
+            var element = document.querySelector('.et_pb_text_1');
+
+            // Calculate translation and scale based on scroll step
+            var initialScale = 8; // Adjust as needed
+            var scale = Math.max(1, initialScale - (0.024 * scrollStep)); // Ensure scale doesn't go below 1
+            var translateY = Math.min(0, 115 - (0.396 * scrollStep)); // Ensure translateY doesn't go above 0
+
+            // Apply transformations
+            element.style.transform = 'translateY(' + translateY + 'px) scale3d(' + scale + ', ' + scale + ', ' + scale + ')';
+            element.style.transition = 'transform 200ms linear';
+          });
+        });
+      </script>
+
+
+
+
+
+
 
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
@@ -729,668 +764,210 @@
   <!-- End Services Section -->
 
   <!-- ======= Testimonials Section ======= -->
-  <section id="testimonials" class="testimonials">
-    <div class="container" data-aos="zoom-in">
-      <div class="section-title">
-        <h2><span>Our Testimonial</span></h2>
+  <section class="testimonialContainer" data-aos="fade-down">
+    <div id="clientTestimonial">
+      Client,s Testimonial</div>
+    <div id="clientTestimonialHeading">
+      See What,s Our Client<br />Says About Us</div>
+    <div class="testimonial1">
 
-      </div>
-      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper">
-
-          <!-- <div class="swiper-slide"> -->
-          <!-- <div class="testimonial-item"> -->
-          <!-- <video controls width="340" autoplay muted> -->
-          <!-- <source src="assets/img/apaar.mp4" type="video/mp4"> -->
-          <!-- <source src="forest.ogg" type="video/ogg"> -->
-          <!-- <p>Sorry, your broswer doesn't support embedded videos. Here's the <a href="https://www.youtube.com/watch?v=KIEscZAUzPM">Link to the video</a></p> -->
-          <!-- </video> -->
-
-
-          <!-- <a href="https://www.youtube.com/watch?v=KIEscZAUzPM" target="_blank"></a>. -->
-
-          <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
-          <!-- <h3>Saul Goodman</h3>
-              <h4>Ceo &amp; Founder</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
-                quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p> -->
-          <!-- </div> -->
-          <!-- </div> -->
-
-
-          <!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item"><br><br><br>
-              <!-- <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""> -->
-              <h3>C satish Reddy</h3>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                "We wee especially impressed with the care and attention that iGate Property Management gave us in
-                helping to find our new home."
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
+      <div class="testi-content">
+        <div class="slide">
+          <p>Really a wonderful experience with Doctor Meghna .. she has great knowledge and she helped me a lot to
+            relieve my neck pains and knee pains .. strongly recommend her work..she is excellent at her work.. thank
+            you dr Meghna for making me pain free</p>
+          <div class="details">
+            <span class="name">Manpreet&nbsp;Kaur</span>
           </div>
-          <!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item"><br><br><br>
-              <!-- <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt=""> -->
-              <h3>Prem Kumar Kakani</h3>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                After years of pestring my realtives to look after my properties in Hyderabad. I finally availed iGate's
-                PMS; and now i am reassured that my assets are looked after well and at reasonable cost. I could finally
-                trust someine to do the right thing without paying through my nose for it.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
-          <!-- End testimonial item -->
-
-          <div class="swiper-slide">
-            <div class="testimonial-item"><br><br><br>
-              <!-- <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
-              <h3>PVL narsimha Raju</h3>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                iGate now manages my properties in india and i am very happy with their services. My apartments and
-                agricultural lands are ably serviced by them. I get prompt services to all my queries and my service
-                request are acted upon immediately. I have even sold my existing apartment and also bought a new one to
-                my full satisfaction. I would recommend iGate to all NRI's in the USA.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
-          <!-- End testimonial item -->
-
-          <!-- <div class="swiper-slide">
-            <div class="testimonial-item"><br><br><br> -->
-          <!-- <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt=""> -->
-          <!-- <h3>Reshma Kaur</h3>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Software solution provided by Apaar Software Technology is hassle free.Professional team delivered the
-                services as per our needs.
-                Communication is done on timely basis which make them trustworthy. The staff is courteous and provide
-                cost effective solutions.
-                Over all 5 star to their work, commitment and services.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div> -->
         </div>
-        <!-- End testimonial item -->
+
+        <div class="slide">
+          <p> Very qualified physiotherapist with dedicated and without fuss attitude towards their client's issues.
+            They checked my medical history, analysed my mussels pain and the root cause and started their treatment. I
+            started feeling better after three sessions and gradually my pain minimized from 8 to 10 days and now I feel
+            more fit and aware towards my body. I would recommend it blindly to all those who are in pain and want to
+            have effective long results in making them fit and happy.</p>
+          <div class="details">
+            <span class="name">Haritha&nbsp;Chandrika</span>
+          </div>
+        </div>
+
+        <div class="slide">
+          <p>I have been suffering with frozen shoulder for almost 3 months .Dr Meghna Kaur treatment plan was
+            systematic solving one issue at a time then moving to the next .I definitely recommend her to anyone who
+            needs physio therapy .She is an amazing physiotherapist
+          </p>
+          <div class="details">
+            <span class="name">Tejinder&nbsp;Kaur</span>
+          </div>
+        </div>
 
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
-
+      <div class="slide-icons-container">
+        <div class="slide-icon active" data-index="0"></div>
+        <div class="slide-icon" data-index="1"></div>
+        <div class="slide-icon" data-index="2"></div>
+      </div>
     </div>
   </section>
-  <!-- End Testimonials Section -->
 
-  <!-- ======= Portfolio Section ======= -->
-  <!-- <section id="portfolio" class="portfolio">
-    <div class="container" data-aos="fade-up">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const testiContent = document.querySelector('.testi-content');
+      const slideIconsContainer = document.querySelector('.slide-icons-container');
+      const slideIcons = document.querySelectorAll('.slide-icon');
 
-      <div class="section-title"> -->
-  <!-- <h2>Portfolio</h2> -->
-  <!-- <h3>Check our <span>Products</span></h3> -->
-  <!-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> -->
-  <!-- </div> -->
+      let currentIndex = 0;
 
-  <!-- <div class="row" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Current Products</li>
-            <li data-filter=".filter-card">Upcoming Products</li>
-            <!-- <li data-filter=".filter-web">Web</li> -->
+      function startSlideshow() {
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % slideIcons.length;
+          updateSlide(currentIndex);
+        }, 5000);
+      }
+      function updateSlide(index) {
+        testiContent.style.transform = `translateX(-${index * 100}%)`;
+
+        // Update active class for icons
+        slideIcons.forEach((icon, i) => {
+          icon.classList.toggle('active', i === index);
+        });
+      }
+
+      slideIcons.forEach((icon, index) => {
+        icon.addEventListener('click', () => {
+          currentIndex = index;
+          updateSlide(currentIndex);
+        });
+      });
+      window.addEventListener('load', startSlideshow);
+    });
+  </script>
   </ul>
   </div>
   </div>
 
   <div class="container" data-aos="fade-up">
-    <div class="services-title"> -->
-      <!-- <h2><span>Current Products</span><span> Upcoming Products</span></span></h2> -->
+    <div class="services-title">
 
-      <!-- <h3><span>Apaar</span> Software provides a blend of software services to its clients.</h3>
-              <p><span><B>"Quality is our top priority"</B></span></p> -->
-      <!-- </div>
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <a href="online-product-catalogue.html"> <img src="assets/img/catalogue.jpeg" class="img-fluid" alt=""></a>
-            <div class="portfolio-info">
-              <h4>Online Product Catalogue</h4> -->
-      <!-- <p>Jewellery</p> -->
-      <!-- <a href="assets/img/catalogue.jpeg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Jewellery"><i class="bx bx-plus"></i></a>
-              <a href="online-product-catalogue.html" class="details-link" title="More Details"><i
-                  class="bx bx-link"></i></a>
-            </div>
-          </div> -->
-
-      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <a href="bulk-whatsapp-messenger.html">
-              <img src="assets/img/bulkwhatsapp_cleanup.jpeg" class="img-fluid" alt=""></a>
-            <div class="portfolio-info">
-              <h4>Bulk Whatsapp Messenger</h4> -->
-      <!-- <p>Bulk WhatsApp</p> -->
-      <!-- <a href="assets/img/bulkwhatsapp_cleanup.jpeg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Bulk WhatsApp"><i class="bx bx-plus"></i></a>
-              <a href="bulk-whatsapp-messenger.html" class="details-link" title="More Details"><i
-                  class="bx bx-link"></i></a>
-            </div>
-          </div> -->
-
-      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div> -->
-
-      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""> 
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div> -->
-
-      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/bulkwhatsapp_cleanup.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Upcoming Product</h4>
-              <p>Bulk Whatsapp</p>
-              <a href="assets/img/bulkwhatsapp_cleanup.jpeg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Bulk Whatsapp"><i class="bx bx-plus"></i></a>
-              <a href="." class="details-link" title="More Details">
-                <i class="bx bx-link"></i>
-              </a>
-            </div>
-          </div> -->
-
-      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div> -->
-
-      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div> -->
-
-      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/unnamed.png" class="img-fluid" alt="" width="500" height="600">
-            <div class="portfolio-info">
-              <h4>Upcoming Product</h4>
-              <p>Inventory Inbilling Management system</p>
-              <a href="assets/img/Cover_Image_A.png" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Whatsapp Chatbot"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div> -->
-
-      <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Upcoming Product</h4> -->
-      <!-- <p>Card</p> -->
-      <!-- <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div> -->
-      <!-- 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div> -->
-
-    </div>
-
-  </div>
-  </section>
-  <!-- End Portfolio Section -->
-
-  <!-- ======= Team Section ======= -->
-  <!-- <section id="team" class="team section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Team</h2>
-        <h3>Our Hardworking <span>Team</span></h3> -->
-  <!-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> -->
-  <!-- </div> -->
-
-  <!-- <div class="row">
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="member">
-            <div class="member-img">
-              <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-          <div class="member">
-            <div class="member-img">
-              <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Sarah Jhonson</h4>
-              <span>Product Manager</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-          <div class="member">
-            <div class="member-img">
-              <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-          <div class="member">
-            <div class="member-img">
-              <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-            </div>
-          </div>
-        </div>
-
-      </div> -->
-
-  <!-- </div> -->
-  <!-- </section> -->
-  <!-- End Team Section -->
-
-  <!-- ======= Pricing Section ======= -->
-  <!-- <section id="pricing" class="pricing">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Pricing</h2>
-          <h3>Check our <span>Pricing</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="box">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
-            <div class="box featured">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="box">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
-            <div class="box">
-              <span class="advanced">Advanced</span>
-              <h3>Ultimate</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
-  <!-- End Pricing Section -->
-
-  <!-- ======= Frequently Asked Questions Section ======= -->
-  <!-- <section id="faq" class="faq section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>F.A.Q</h2>
-          <h3>Frequently Asked <span>Questions</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-xl-10">
-            <ul class="faq-list">
-
-              <li>
-                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-                  </p>
-                </div>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section> -->
-  <!-- End Frequently Asked Questions Section -->
-
-  <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Contact Us</h2>
-        <!-- <h3><span>Contact Us</span></h3>
+          <div class="section-title">
+            <h2>Contact Us</h2>
+            <!-- <h3><span>Contact Us</span></h3>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> -->
-        <!-- </div> -->
+            <!-- </div> -->
 
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-6">
-            <div class="info-box mb-4">
-              <i class="bx bx-map"></i>
-              <h3>Our Address</h3>
-              <p>iGate Property Management Pvt. Ltd.
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-lg-6">
+                <div class="info-box mb-4">
+                  <i class="bx bx-map"></i>
+                  <h3>Our Address</h3>
+                  <p> No. 6-3-783 To 785, Lane Opp. to Big Bazar,
+                    Ameerpet, Hyderabad, Telangana 500016.
+                </div>
+              </div>
 
-                USA: 7953 Tullymore Drive, Dublin, OH4030316.
+              <div class="col-lg-3 col-md-6">
+                <div class="info-box  mb-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>physiocare.com</p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="info-box  mb-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p>099082 17712</p>
+                </div>
+              </div>
+
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6">
-            <div class="info-box  mb-4">
-              <i class="bx bx-envelope"></i>
-              <h3>Email Us</h3>
-              <p>info@igatepropertymanagement.com</p>
-            </div>
-          </div>
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-3 col-md-6">
-            <div class="info-box  mb-4">
-              <i class="bx bx-phone-call"></i>
-              <h3>Call Us</h3>
-              <p>+1 614-551-0396</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-6 ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.4757580737837!2d78.34316033847651!3d17.41411425514614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb947951fb2eff%3A0x42f26e10348dd6d9!2sVajra&#39;s%20Jasmine%20County!5e0!3m2!1sen!2sin!4v1700743893467!5m2!1sen!2sin"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <!-- <iframe class="mb-4 mb-lg-0"
+              <div class="col-lg-6 ">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d121810.72484690629!2d78.36803883844972!3d17.431685364453877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bcb90ca27a15865%3A0x9fc3fcf16548ef7f!2sNo.%206-3-783%20To%20785%2C%20Lane%20Opp.%20to%20Big%20Bazar%2C%20Ameerpet%2C%20Hyderabad%2C%20Telangana%20500016!3m2!1d17.431702299999998!2d78.4504406!5e0!3m2!1sen!2sin!4v1712140994682!5m2!1sen!2sin"
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- <iframe class="mb-4 mb-lg-0"
               src="https://www.google.com/maps/dir/17.4589832,78.4183459/Apaar+Software+Technology+Services+Private+Limited,+Spring+View+Towers,+East+Srinivas+Nagar+Colony,+Sanjeeva+Reddy+Nagar+Office+Area,+Sanjeeva+Reddy+Nagar,+Hyderabad,+Telangana+500038/@17.4509638,78.4217727,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bcb91db961ab67d:0x395f20b4a027c272!2m2!1d78.4455268!2d17.4415628"
               frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe> -->
-          </div>
-
-          <div class="col-lg-6">
-            <form action="https://formsubmit.co/praveenkurupati5@gmail.com" method="post" role="form"
-              class="php-email-form">
-              <div class="row">
-                <div class="col form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+
+              <div class="col-lg-6">
+                <form action="https://formsubmit.co/praveenkurupati5@gmail.com" method="post" role="form"
+                  class="php-email-form">
+                  <div class="row">
+                    <div class="col form-group">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="col form-group">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                        required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div>
+                  <div class="text-center"><button type="submit">Send Message</button></div>
+                </form>
               </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
 
-        </div>
-
-      </div> -->
-  </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-
-  <footer id="footer">
-
-    <!-- <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <div class="footer-top ">
-      <section id="about" class="about section-bg">
-        <div class="container">
-          <div class="row">
-
-            <div class="col-lg-3 col-md-3 footer-contact">
-              <img src="assets/img/igate-logo - Copy.jpg" class="img-fluid" alt="">
-              <img src="assets/img/1 (1).jpg" class="img-fluid" alt=""><br /><br />
-              <!-- <h3>Apaar Software<span>.</span></h3> -->
-              <p>
-                USA: 7953 Tulymore Drive, Dublin, <br>
-                0H40316.<br><br />
-                <b>Contact Srikanth Marpadga</b>
-                <br />
-                <strong>Phone:</strong> +1 614-551-0396<br>
-                <strong>Email:</strong> info@igatepropertymanagement.com<br>
-              </p>
             </div>
 
-            <!-- <div class="col-lg-2 col-md-4 footer-links">
+          </div>
+      </section>
+      </main>
+
+
+      <footer id="footer">
+        <div class="footer-top ">
+          <section id="about" class="about section-bg">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 col-md-3 footer-contact">
+                  <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 36px; font-weight: 800;">
+                    Physio Care</h2>
+                  <br />
+                  <!-- <img src="assets/img/igate-logo - Copy.jpg" class="img-fluid" alt=""> -->
+                  <!-- <img src="assets/img/1 (1).jpg" class="img-fluid" alt=""><br /><br /> -->
+                  <!-- <h3>Apaar Software<span>.</span></h3> -->
+                  <p>
+                    No. 6-3-783 To 785, Lane Opp. to Big Bazar,
+                    Ameerpet, Hyderabad, Telangana 500016.<br><br />
+                    <b>Contact Meghna kaur</b>
+                    <br />
+                    <strong>Phone:</strong> 099082 17712 <br>
+                    <strong>Email:</strong> physiocare.com<br>
+                  </p>
+                </div>
+
+                <!-- <div class="col-lg-2 col-md-4 footer-links">
               <h4>Useful Links</h4>
               <ul>
                 <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li> -->
-            <!-- <li><i class="bx bx-chevron-right"></i> <a href="#software-trainings">Software Trainings</a></li> -->
-            <!-- <li><i class="bx bx-chevron-right"></i> <a href="services.html">Services</a></li> -->
-            <!-- <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact Us</a></li> -->
-            <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
-            <!-- </ul>
+                <!-- <li><i class="bx bx-chevron-right"></i> <a href="#software-trainings">Software Trainings</a></li> -->
+                <!-- <li><i class="bx bx-chevron-right"></i> <a href="services.html">Services</a></li> -->
+                <!-- <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact Us</a></li> -->
+                <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
+                <!-- </ul>
             </div> -->
 
-            <!-- <div class="col-lg-5 col-md-6 footer-links">
+                <!-- <div class="col-lg-5 col-md-6 footer-links">
               <div class="container text-center">
                 <div class="row">
                   <h4 class="column"><u>Useful Links</u></h4>
@@ -1411,7 +988,7 @@
                   <div class="col">
 
                     <ul> -->
-            <!-- <li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i> DevOps</li>
+                <!-- <li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i> DevOps</li>
                       <li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i>ReactJS</a></li>
                       <li>&nbsp;&nbsp;&nbsp;&nbsp;<i class="bx bx-chevron-right"></i> <a
                           href="full-stack-java.html">Full
@@ -1419,7 +996,7 @@
 
 
 
-            <!-- <li><i class="bx bx-chevron-right"></i> <a href="recruitment-consultancy.html">Recruitment
+                <!-- <li><i class="bx bx-chevron-right"></i> <a href="recruitment-consultancy.html">Recruitment
                           Consultancy</a></li>
                       <li><i class="bx bx-chevron-right"></i> <a href="our-product.html">Our Products</a></li>
 
@@ -1428,15 +1005,15 @@
                       <li><i class="bx bx-chevron-right"></i> <a href="bulk-whatsapp-messenger.html">Bulk Whatsapp
                           Messenger</a></li> -->
 
-            <!-- <li><i class="bx bx-chevron-right"></i> <a href="software-trainings.html">Software Trainings</a>
+                <!-- <li><i class="bx bx-chevron-right"></i> <a href="software-trainings.html">Software Trainings</a>
                       </li> -->
-            <!-- <li><i class="bx bx-chevron-right"></i> <a href="hiring.html">Hiring</a></li> -->
-            <!-- <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact Us</a></li> -->
-            </ul>
-          </div>
+                <!-- <li><i class="bx bx-chevron-right"></i> <a href="hiring.html">Hiring</a></li> -->
+                <!-- <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact Us</a></li> -->
+                </ul>
+              </div>
+            </div>
         </div>
-    </div>
-    <!-- <h4>Useful Links</h4>
+        <!-- <h4>Useful Links</h4>
               <ul>
                 <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="services.html">Services</a></li><span>kjhgfhjnbhmg</span>
@@ -1472,48 +1049,48 @@
     <!-- <a href="https://api.whatsapp.com/send/?phone=7842001257&text&type=phone_number&app_absent=0"
                   class="whatsapp"><i class="bi bi-whatsapp"></i></a> -->
 
-    </div>
+  </div>
 
-    <!-- <img src="assets/img/WhatsApp Image 2023-05-27 at 12.57.05 PM.jpeg" class="bni" alt=""> -->
+  <!-- <img src="assets/img/WhatsApp Image 2023-05-27 at 12.57.05 PM.jpeg" class="bni" alt=""> -->
 
-    </div>
+  </div>
 
-    </div>
-    </div>
-    </section>
-    </div>
+  </div>
+  </div>
+  </section>
+  </div>
 
-    <div class="container py-4">
-      <div class="copyright">
-        Copyright @ 2023 <strong><span>IGate</span></strong>. All Rights Reserved
-      </div>
-      <!-- <div class="credits">
+  <div class="container py-4">
+    <div class="copyright">
+      Copyright @ 2024 <strong><span>Physiocare</span></strong>. All Rights Reserved
+    </div>
+    <!-- <div class="credits">
      All the links in the footer should remain intact.
     You can delete the links only if you purchased the pro version.
     Licensing information: https://bootstrapmade.com/license/
      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/
     Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div> -->
-      <!-- </div>
+    <!-- </div>
   </footer> -->
-      <!-- End Footer -->
+    <!-- End Footer -->
 
-      <div id="preloader"></div>
-      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-          class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
 
-      <!-- Vendor JS Files -->
-      <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-      <script src="assets/vendor/aos/aos.js"></script>
-      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-      <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-      <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-      <!-- Template Main JS File -->
-      <script src="assets/js/main.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
 
 </body>
 
