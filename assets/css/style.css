@@ -10,6 +10,7 @@
 # General
 --------------------------------------------------------------*/
 
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -21,7 +22,7 @@ a {
 }
 
 a:hover {
-  color: #3b8af2;
+  color: #060707;
   text-decoration: none;
 }
 
@@ -2748,7 +2749,7 @@ section {
 }
 
 #footer .footer-top .footer-contact h3 span {
-  color: #106eea;
+  color: #2c2e31;
 }
 
 #footer .footer-top .footer-contact p {
@@ -2823,7 +2824,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #3b8af2;
+  background: #0b0c0c;
   color: #fff;
   text-decoration: none;
 }
@@ -2857,8 +2858,8 @@ section {
 }
 
 .img-fluid {
-  /* max-width: 60%; */
-  /* height: auto; */
+  max-width: 360px; 
+   height: 460px;
 }
 
 .large-img {
