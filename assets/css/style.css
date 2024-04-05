@@ -1112,7 +1112,8 @@ h6 {
   left: 0;
   width: 21%;
   height: 52%;
-  background-image: url(/assets/img/smallImage2.jpg);
+  /* background-image: url(/assets/img/smallImage2.jpg); */
+  background-image: url(/assets/img/1.jpg);
   background-size: cover;
   z-index: -1;
   margin-left: 176vh;
