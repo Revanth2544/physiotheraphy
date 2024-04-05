@@ -1218,15 +1218,100 @@ h6 {
   color: #666;
   font-size: 18px;
   line-height: 1.6;
+
 }
 
-.introduction-heading {
-  opacity: 0; /* Initially hide the element */
-  transition: opacity 0.5s ease; /* Apply transition to opacity */
+#textWrapper {
+  width: 100%;
+  text-align: center;
 }
 
-.introduction-heading.show {
-  opacity: 1; /* Show the element when the show class is added */
+#contentContainer b {
+  display: none;
+  transition: opacity 3s ease;
+}
+
+#contentContainer b.visible {
+  display: block;
+}
+
+.ai {
+  padding: 20px;
+}
+
+.ai div {
+  flex: 1;
+}
+
+.ai h1,
+ai h5 {
+  text-align: left;
+  margin: 0;
+}
+
+.videoai {
+  max-width: 70%;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 63px;
+}
+
+.aitools {
+  margin-left: -118vh;
+}
+
+.aitoolsheading {
+  margin-left: 168px;
+  height: 341px;
+}
+
+.howitworks {
+  margin-right: 22vh;
+  margin-left: 225px;
+  font-size: 20px;
+}
+
+.howitworksspan {
+  margin-right: 22vh;
+  margin-left: 225px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.howitworksspan1 {
+  margin-right: 22vh;
+  margin-left: 180px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.howitworks1 {
+  margin-right: 22vh;
+  margin-left: 180px;
+  font-size: 20px;
+}
+
+.aitoolsheading1 {
+  margin-right: 156px;
+  height: 341px;
+}
+
+.aitoolsheading2 {
+  margin-left: 123px;
+  height: 341px;
+}
+
+.howitworksspan2 {
+  margin-right: 22vh;
+  margin-left: 26px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.howitworks2 {
+  margin-right: 25vh;
+  margin-left: 25px;
+  font-size: 20px;
 }
 
 #hero {
@@ -2858,8 +2943,8 @@ section {
 }
 
 .img-fluid {
-  max-width: 360px; 
-   height: 460px;
+  max-width: 360px;
+  /* height: 460px; */
 }
 
 .large-img {
