@@ -41,6 +41,7 @@
 </head>
 
 <body>
+
   <script>
     window.addEventListener('scroll', function () {
       var scrollPosition = window.scrollY;
@@ -54,8 +55,6 @@
         imageContainer.classList.remove('zoom-out');
       }
     });
-
-
   </script>
 
   <!-- <div class="icons">
@@ -75,39 +74,53 @@
   <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">physiocare.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 614-551-0396</span></i>
+        <i class="bi bi-phone align-items-center ms-4"></i>/
+        <i class="bi bi-whatsapp align-items-center ms-1"></i>
+        &nbsp;&nbsp;<span>+91 99082 17712</span>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
-        <!-- <a href="https://twitter.com/ApaarSoftware" class="twitterr"><i class="bi bi-twitter"></i></a> -->
         <a href="https://www.facebook.com/ApaarSoftware" class="facebookk"><i class="bi bi-facebook"></i></a>
         <a href="https://www.instagram.com/ApaarSoftware/" class="instagramm"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/apaarsoftware/" class="linkedinn"><i class="bi bi-linkedin"></i></a>
-        <!-- <a href="https://api.whatsapp.com/send/?phone=7842001257&text&type=phone_number&app_absent=0"
-          class="whatsappp"><i class="bi bi-whatsapp"></i></a> -->
       </div>
     </div>
   </section>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
+  <header id="header" class="d-flex align-items-center" style="position: relative;">
     <div class="entireDiv d-flex align-items-center">
-      <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 36px; font-weight: 800;">Physio Care</h2>
+      <h2 class="physiocareHeading">PHYSIOCARE</h2>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li class="dropdown"><a href=""><span>Services</span>
-            </a>
+          <li class="dropdown"><a href=""><span>Treatments</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a href="#">Electro Theraphy</a></li>
+              <li><a href="#">Exercise Theraphy</a></li>
+              <li><a href="#">Strectching</a></li>
+              <li><a href="#">Strengthing</a></li>
+              <li><a href="#">Antenatal And Postnata(Before Pregnancy And After Pregnancy)</a></li>
+            </ul>
           </li>
-          <li class="dropdown"><a href=""><span>Our Products</span></li>
+          <li class="dropdown"><a href=""><span>Available Products</span><i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a href="#">Cervical Collar</a></li>
+              <li><a href="#">LS Belt</a></li>
+              <li><a href="#">Knee Brace</a></li>
+              <li><a href="#">Elbow Brace</a></li>
+              <li><a href="#">Ankle Brace</a></li>
+              <li><a href="#">Arm Sling</a></li>
+              <li><a href="#">Butterfly Pillow</a></li>
+              <li><a href="#">Cervical Pillow</a></li>
+              <li><a href="#">MCR Footwear</a></li>
+            </ul>
+          </li>
+
           <li><a class="nav-link scrollto" href="">Contact</a></li>
         </ul>
-        </li>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
     </div>
   </header>
-
 
   <section data-aos="fade-right" data-aos-delay="80" id="hero" class="d-flex align-items-center">
     <div data-aos="fade-right" data-aos-delay="950" class="background-image"></div> <!-- Background image container -->
@@ -124,7 +137,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- ======= About Section ======= -->
   <section id="about" class="about section-bg">
     <div class="container">
@@ -147,22 +160,30 @@
         // Reset transformation when the page reloads
         window.addEventListener('load', function () {
           resetTransformation();
-          // Then, attach the scroll event listener
+          var scrolled = false;
+          // Attach the scroll event listener
           window.addEventListener('scroll', function () {
-            var scrollStep = window.scrollY || document.documentElement.scrollTop;
-            var element = document.querySelector('.et_pb_text_1');
+            if (!scrolled) {
+              var element = document.querySelector('.et_pb_text_1');
+              // Calculate translation and scale based on scroll step
+              var initialScale = 8; // Adjust as needed
+              var scale = 1; // Set the final scale
+              var translateY = 0; // Set the final translateY
 
-            // Calculate translation and scale based on scroll step
-            var initialScale = 8; // Adjust as needed
-            var scale = Math.max(1, initialScale - (0.024 * scrollStep)); // Ensure scale doesn't go below 1
-            var translateY = Math.min(0, 115 - (0.396 * scrollStep)); // Ensure translateY doesn't go above 0
-
-            // Apply transformations
-            element.style.transform = 'translateY(' + translateY + 'px) scale3d(' + scale + ', ' + scale + ', ' + scale + ')';
-            element.style.transition = 'transform 200ms linear';
+              // Apply transformations
+              element.style.transform = 'translateY(' + translateY + 'px) scale3d(' + scale + ', ' + scale + ', ' + scale + ')';
+              element.style.transition = 'transform 200ms linear';
+              scrolled = true;
+              // Remove the scroll event listener
+              window.removeEventListener('scroll', arguments.callee);
+            }
           });
         });
       </script>
+
+
+
+
 
       <div class="container">
         <div class="row">
@@ -172,7 +193,7 @@
           <div id="contentContainer" class="col-lg-8 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
             data-aos="fade-up" data-aos-delay="100">
             <div id="textWrapper">
-              <b>
+              <!-- <b>
                 Physical therapy, is a healthcare profession focused on improving and restoring movement and function to
                 individuals affected by injury, illness, or disability. Physiotherapists utilize a variety of
                 techniques,
@@ -186,7 +207,7 @@
                 exercises, and modalities to help patients alleviate pain, improve mobility, and regain strength and
                 flexibility in affected areas of the body. India.
               </b>
-              <br />
+              <br /> -->
               <b>Through assessment, diagnosis, and treatment, physiotherapists aim to enhance the overall well-being
                 and
                 quality of life of their patients. They may work with individuals of all ages and backgrounds,
@@ -194,13 +215,13 @@
                 a wide range of conditions including musculoskeletal injuries, neurological disorders, cardiovascular
                 conditions, and respiratory problems.</b>
               <br />
-              <b>Treatment plans in physiotherapy often involve a combination of manual therapy techniques, therapeutic
+              <!-- <b>Treatment plans in physiotherapy often involve a combination of manual therapy techniques, therapeutic
                 exercises, specialized equipment, and patient education. Physiotherapists also play a crucial role in
                 injury prevention, rehabilitation, and promoting optimal physical health and function.</b>
               <br />
               <b>Additionally, physiotherapy focuses on empowering patients to take an active role in their own recovery
                 by teaching them self-management techniques and strategies to maintain and improve their physical health
-                over the long term.</b>
+                over the long term.</b> -->
             </div>
           </div>
         </div>
@@ -255,7 +276,7 @@
   </section>
 
 
-  <section class="ai" style="display: flex; justify-content: space-between; align-items: center;">
+  <!-- <section class="ai" style="display: flex; justify-content: space-between; align-items: center;">
     <div>
       <h1 style="font-family:verdana; margin-left: 160px;">India's first AI-assisted physiotherapy</h1>
       <br />
@@ -264,7 +285,7 @@
     <div>
       <video class="videoai" src="/assets/img/yp_ai_vid_JwKe6CfTX.mp4" autoplay muted></video>
     </div>
-  </section>
+  </section> -->
 
   <!-- End About Section -->
 
@@ -310,16 +331,13 @@
     </div>
   </section>
 
-  
+
 
   <!-- ======= Testimonials Section ======= -->
   <section class="testimonialContainer" data-aos="fade-down">
-    <div id="clientTestimonial">
-      Client,s Testimonial</div>
-    <div id="clientTestimonialHeading">
-      See What,s Our Client<br />Says About Us</div>
+    <div id="clientTestimonial">Testimonial</div>
+    <div id="clientTestimonialHeading">See What Our Client<br />Says About Us</div>
     <div class="testimonial1">
-
       <div class="testi-content">
         <div class="slide">
           <p>Really a wonderful experience with Doctor Meghna .. she has great knowledge and she helped me a lot to
@@ -490,18 +508,23 @@
               <div class="row">
                 <div class="col-lg-3 col-md-3 footer-contact">
                   <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 36px; font-weight: 800;">
-                    Physio Care</h2>
+                    PhysioCare</h2>
                   <br />
                   <!-- <img src="assets/img/igate-logo - Copy.jpg" class="img-fluid" alt=""> -->
                   <!-- <img src="assets/img/1 (1).jpg" class="img-fluid" alt=""><br /><br /> -->
                   <!-- <h3>Apaar Software<span>.</span></h3> -->
                   <p>
+                    <b>Dr.Meghna Kaur</b><br />
+                    BPT(Manipal), MIAP(Reg.No.-8097).
+                  </p>
+                  <br />
+                  <p>
                     No. 6-3-783 To 785, Lane Opp. to Big Bazar,
                     Ameerpet, Hyderabad, Telangana 500016.<br><br />
                     <b>Contact Meghna kaur</b>
                     <br />
-                    <strong>Phone:</strong> 099082 17712 <br>
-                    <strong>Email:</strong> physiocare.com<br>
+                    <strong>Phone:</strong> +91 99082 17712 <br>
+                    <!-- <strong>Email:</strong> physiocare.com<br> -->
                   </p>
                 </div>
 

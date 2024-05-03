@@ -835,6 +835,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background-color: #e3f2fd;
 }
 
@@ -912,16 +913,23 @@ h6 {
 }
 
 #clientTestimonial {
-  width: 237.64px;
-  margin-left: -26.36px;
+  /* width: 237.64px; */
+  margin-left: 84vh;
   height: 20.80px;
   color: #007E7D;
-  font-size: 16px;
+  font-size: 31px;
   font-family: Nunito Sans;
-  font-weight: 600;
+  font-weight: 1000;
   line-height: 20.80px;
   word-wrap: break-word;
-  margin-top: -10%;
+  margin-top: -24%;
+}
+
+#physiocareHeading {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 0;
 }
 
 #testimonial {
@@ -950,7 +958,7 @@ h6 {
 
 #clientTestimonialHeading {
   width: 487.51px;
-  margin-left: -246.36px;
+  margin-left: -100.36vh;
   height: 118.19px;
   color: #007E7D;
   font-size: 44px;
@@ -1112,8 +1120,7 @@ h6 {
   left: 0;
   width: 21%;
   height: 52%;
-  /* background-image: url(/assets/img/smallImage2.jpg); */
-  background-image: url(/assets/img/1.jpg);
+  background-image: url(/assets/img/smallImage2.jpg);
   background-size: cover;
   z-index: -1;
   margin-left: 176vh;
@@ -1131,7 +1138,6 @@ h6 {
   z-index: -1;
   margin-left: 188vh;
   margin-top: 3px;
-
 }
 
 .entireDiv {
@@ -1490,6 +1496,79 @@ ai h5 {
   #hero .carousel-control-prev {
     left: 6%;
   }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17%;
+    height: 32%;
+    background-image: url(/assets/img/smallimage01.jpg);
+    background-size: cover;
+    z-index: -1;
+    margin-left: 711px;
+    margin-top: 1px;
+  }
+
+  .background-image1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 21%;
+    height: 52%;
+    background-image: url(/assets/img/smallImage2.jpg);
+    background-size: cover;
+    z-index: -1;
+    margin-left: 176vh;
+    margin-top: 210px;
+  }
+
+  .background-image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14%;
+    height: 42%;
+    background-image: url(/assets/img/smallimg.webp);
+    background-size: cover;
+    z-index: -1;
+    margin-left: 188vh;
+    margin-top: 3px;
+  }
+
+  .entireDiv {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .navbar {
+    padding-left: 5%;
+  } */
+
+  .back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #106eea;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+
+  .justify-content-md-between {
+    justify-content: space-between !important;
+  }
+
 }
 
 @media (max-width: 992px) {
