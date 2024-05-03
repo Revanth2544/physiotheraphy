@@ -1099,18 +1099,14 @@ h6 {
   /* You can set the active color */
 }
 
-
-
 .background-image {
   position: absolute;
   top: 0;
   left: 0;
-  width: 17%;
-  height: 32%;
-  background-image: url(assets/img/smallimage01.jpg);
+  height: 73%;
   background-size: cover;
   z-index: -1;
-  margin-left: 711px;
+  margin-left: 353px;
   margin-top: 1px;
 }
 
@@ -1118,27 +1114,24 @@ h6 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 21%;
-  height: 52%;
-  background-image: url(assets/img/smallImage2.jpg);
+  height: 72%;
   background-size: cover;
   z-index: -1;
-  margin-left: 176vh;
-  margin-top: 210px;
+  margin-left: 613px;
+  margin-top: 110px;
 }
 
 .background-image2 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 14%;
-  height: 42%;
-  background-image: url(assets/img/smallimg.webp);
+  height: 72%;
   background-size: cover;
   z-index: -1;
-  margin-left: 188vh;
+  margin-left: 660px;
   margin-top: 3px;
 }
+
 
 .entireDiv {
   width: 100%;
@@ -1489,13 +1482,13 @@ ai h5 {
     left: 0;
     width: 19%;
     height: 28%;
-    background-image: url(assets/img/smallimage01.jpg);
+    /* background-image: url(assets/img/smallimage01.jpg); */
     background-size: cover;
     z-index: -1;
     margin-left: 463px;
     margin-top: 1px;
   }
-
+/* 
   .background-image1 {
     position: absolute;
     top: 0;
@@ -1507,9 +1500,9 @@ ai h5 {
     z-index: -1;
     margin-left: 128vh;
     margin-top: 210px;
-  }
+  } */
   
-  .background-image2 {
+  /* .background-image2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -1520,7 +1513,7 @@ ai h5 {
     z-index: -1;
     margin-left: 147vh;
     margin-top: 3px;
-  }
+  } */
   .navbar {
     padding-left: 29%;
 }
