@@ -42,20 +42,6 @@
 
 <body>
 
-  <script>
-    window.addEventListener('scroll', function () {
-      var scrollPosition = window.scrollY;
-      var heroSection = document.getElementById('hero');
-      var threshold = heroSection.offsetTop + heroSection.offsetHeight / 2;
-      var imageContainer = document.querySelector('.image-container');
-
-      if (scrollPosition > threshold) {
-        imageContainer.classList.add('zoom-out');
-      } else {
-        imageContainer.classList.remove('zoom-out');
-      }
-    });
-  </script>
 
   <!-- <div class="icons">
     <a href="https://www.facebook.com/ApaarSoftware" class="facebook"> <i class="fab fa-facebook"></i><small>
@@ -136,17 +122,19 @@
       <img class="background-image2" src="assets/img/smallimg.webp" />
     </div>
 
-    <div data-aos="fade-down" data-aos-delay="1100" class="entireDiv d-flex">
+    <div data-aos="fade-down" data-aos-delay="1100" class="entireDiv">
       <div class="image-container">
         <img src="assets/img/physiotherapy_-transformed.png" alt="Physiotherapy Image">
       </div>
-      <div class="text-container">
-        <h2>Physio Care</h2>
-        <p style="font-family: Verdana; font-weight:900; font-size: 19px; z-index: 9;">You'll love the way we care for
-          you.</p>
+
+      <div class="text-container"
+        style="position: relative; width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(197, 19, 19, 0.1); height: 150px;">
+        <img class="background-imageInside" src="assets/img/image.webp" />
+        <h2 style="position: relative; z-index: 1;">Physio Care</h2>
+        <p style="position: relative; z-index: 1; font-family: Verdana; font-weight: 900; font-size: 19px;">You'll love
+          the way we care for you.</p>
       </div>
     </div>
-
   </section>
 
   <!-- ======= About Section ======= -->
