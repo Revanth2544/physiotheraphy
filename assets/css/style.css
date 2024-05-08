@@ -1264,11 +1264,13 @@ ai h5 {
 .aitoolsheading1 {
   margin-right: 156px;
   height: 341px;
+  margin-top: -100px;
 }
 
 .aitoolsheading2 {
   margin-left: 123px;
   height: 341px;
+  margin-top: -100px;
 }
 
 .howitworksspan2 {
@@ -2989,7 +2991,48 @@ section {
 
 .img-fluid {
   max-width: 360px;
-  /* height: 460px; */
+}
+.img-fluidd {
+  max-width: 560px;
+}
+
+.Divider {
+  width: 106%;
+  height: 23px;
+  text-align: center;
+  display: flex;
+  margin-top: -15px;
+  margin: -18px 8px; 
+  margin-left: -4px;
+
+}
+
+.Side {
+  width: 46.665%;
+  padding: 1px 0;
+  margin: -6px 10px;
+}
+
+.Middle {
+  width: 15.67%;
+  padding: 2px 0;
+  margin: 0px 17px;
+
+}
+
+.Middle span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: -0px; */
+  font-size: 11px;
+  margin: 0 10px;
+  /* Adjust margin to add space */
+
+}
+
+.physiocareHeading {
+  position: relative;
 }
 
 .large-img {
