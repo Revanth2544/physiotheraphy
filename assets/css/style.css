@@ -923,10 +923,12 @@ h6 {
 }
 
 #physiocareHeading {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Rubik, sans-serif;
   font-size: 36px;
   font-weight: 800;
   margin-bottom: 0;
+  position: relative;
+  z-index: 1;
 }
 
 #testimonial {
@@ -2962,8 +2964,8 @@ section {
 }
 
 #footer .copyright {
-  text-align: center;
-  float: left;
+  display: flex;
+  justify-content: center;
 }
 
 #footer .credits {
@@ -2992,6 +2994,7 @@ section {
 .img-fluid {
   max-width: 360px;
 }
+
 .img-fluidd {
   max-width: 560px;
 }
@@ -3002,7 +3005,7 @@ section {
   text-align: center;
   display: flex;
   margin-top: -15px;
-  margin: -18px 8px; 
+  margin: -18px 8px;
   margin-left: -4px;
 
 }
