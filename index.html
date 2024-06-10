@@ -124,126 +124,116 @@
     </div>
   </header>
 
-  <section data-aos="fade-right" data-aos-delay="80" id="hero" class="d-flex align-items-center">
-
-    <div data-aos="fade-right" data-aos-delay="950" class="background-image">
-      <img class="background-image" src="assets/img/smallimage01.jpg" />
-    </div>
-
-    <div data-aos="fade-left" data-aos-delay="750" class="background-image1">
-      <img class="background-image1" src="assets/img/smallImage2.jpg" />
-    </div>
-
-    <div data-aos="fade-up" data-aos-delay="300" class="background-image2">
-      <img class="background-image2" src="assets/img/smallimg.webp" />
-    </div>
-
-    <div data-aos="fade-down" data-aos-delay="1100" class="entireDiv">
-      <div class="image-container">
-        <img src="assets/img/physiotherapy_-transformed.png" alt="Physiotherapy Image">
+  <section id="hero" class="d-flex align-items-center">
+    <div id="heroCarousel" data-bs-interval="3000" class="carousel slide carousel-fade " data-bs-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide 1 -->
+        <div class="carousel-item  active" style="background-image: url(assets/img/slidee-1.jpg);"></div>
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url(assets/img/physiotherapy_-transformed.png);"></div>
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url(assets/img/physiotherapy1.png);"></div>
       </div>
-
-      <div class="text-container"
-        style="position: relative; width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(197, 19, 19, 0.1); height: 150px;">
-        <img class="background-imageInside" src="assets/img/image.webp" />
-        <h2 style="position: relative; z-index: 1;">Physio Care</h2>
-        <p style="position: relative; z-index: 1; font-family: Verdana; font-weight: 900; font-size: 19px;">You'll love
-          the way we care for you.</p>
-      </div>
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
     </div>
   </section>
 
-  <!-- ======= About Section ======= -->
+  <!-- ======= Introduce Our Service Section ======= -->
   <section id="about" class="about section-bg">
     <div class="container">
 
       <div class="section-title">
-        <!-- <h2>About Us</h2> -->
-        <!-- <h2>Our Process</h2> -->
         <h3 class="et_pb_text_1">Let Us Introduce Ourselves</h3>
       </div>
       <script>
-        // Function to reset the transformation
         function resetTransformation() {
           var element = document.querySelector('.et_pb_text_1');
-          var initialScale = 8; // Adjust as needed
-          var translateY = 155; // Adjust as needed
+          var initialScale = 8;
+          var translateY = 155;
           element.style.transform = 'translateY(' + translateY + 'px) scale3d(' + initialScale + ', ' + initialScale + ', ' + initialScale + ')';
-          element.style.transition = 'transform 0ms'; // Reset transition time to 0ms
+          element.style.transition = 'transform 0ms';
         }
 
-        // Reset transformation when the page reloads
         window.addEventListener('load', function () {
           resetTransformation();
           var scrolled = false;
-          // Attach the scroll event listener
           window.addEventListener('scroll', function () {
             if (!scrolled) {
               var element = document.querySelector('.et_pb_text_1');
-              // Calculate translation and scale based on scroll step
-              var initialScale = 8; // Adjust as needed
-              var scale = 1; // Set the final scale
-              var translateY = 0; // Set the final translateY
 
-              // Apply transformations
+              var initialScale = 8;
+              var scale = 1;
+              var translateY = 0;
+
               element.style.transform = 'translateY(' + translateY + 'px) scale3d(' + scale + ', ' + scale + ', ' + scale + ')';
               element.style.transition = 'transform 200ms linear';
               scrolled = true;
-              // Remove the scroll event listener
               window.removeEventListener('scroll', arguments.callee);
             }
           });
         });
       </script>
 
-
-
-
-
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets\img\physiotherapy1.png" class="img-fluid" alt="">
-          </div>
-          <div id="contentContainer" class="col-lg-8 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
-            data-aos="fade-up" data-aos-delay="100">
-            <div id="textWrapper">
-              <!-- <b>
-                Physical therapy, is a healthcare profession focused on improving and restoring movement and function to
-                individuals affected by injury, illness, or disability. Physiotherapists utilize a variety of
-                techniques,
-                exercises, and modalities to help patients alleviate pain, improve mobility, and regain strength and
-                flexibility in affected areas of the body. India.
-              </b>
-              <b>
-                Physical therapy, is a healthcare profession focused on improving and restoring movement and function to
-                individuals affected by injury, illness, or disability. Physiotherapists utilize a variety of
-                techniques,
-                exercises, and modalities to help patients alleviate pain, improve mobility, and regain strength and
-                flexibility in affected areas of the body. India.
-              </b>
-              <br /> -->
-              <b>Through assessment, diagnosis, and treatment, physiotherapists aim to enhance the overall well-being
-                and
-                quality of life of their patients. They may work with individuals of all ages and backgrounds,
-                addressing
-                a wide range of conditions including musculoskeletal injuries, neurological disorders, cardiovascular
-                conditions, and respiratory problems.</b>
-              <br />
-              <!-- <b>Treatment plans in physiotherapy often involve a combination of manual therapy techniques, therapeutic
-                exercises, specialized equipment, and patient education. Physiotherapists also play a crucial role in
-                injury prevention, rehabilitation, and promoting optimal physical health and function.</b>
-              <br />
-              <b>Additionally, physiotherapy focuses on empowering patients to take an active role in their own recovery
-                by teaching them self-management techniques and strategies to maintain and improve their physical health
-                over the long term.</b> -->
-            </div>
+        <div class="">
+          <div id="textWrapper">
+            <p style="font-weight: 510;">Welcome to <strong>Physiocare</strong>, a premier physiotherapy clinic
+              dedicated to helping you achieve optimal
+              health and wellness. At our clinic, we believe in the power of personalized care and evidence-based
+              treatments to restore movement, reduce pain, and enhance your quality of life.<br /><br />
+
+              Our team of highly skilled and compassionate physiotherapists specializes in a wide range of services,
+              including.<br /><br />
+
+              <strong>Orthopedic Rehabilitation:</strong> Treatment for musculoskeletal injuries such as fractures,
+              sprains, and
+              post-surgical rehabilitation.<br /><br />
+
+              <strong>Sports Physiotherapy:</strong> Customized care for athletes of all levels to prevent injuries,
+              improve
+              performance, and facilitate recovery.<br /><br />
+
+              <strong>Neurological Rehabilitation:</strong> Therapy for conditions like stroke, Parkinson's disease, and
+              multiple
+              sclerosis to improve mobility and functional independence.<br /><br />
+
+              <strong>Pediatric Physiotherapy:</strong> Specialized care for children with developmental, neuromuscular,
+              and
+              orthopedic conditions.<br /><br />
+
+              <strong>Chronic Pain Management:</strong> Comprehensive strategies to manage and alleviate persistent pain
+              conditions, such as arthritis and fibromyalgia.<br /><br />
+
+              <strong>Postural Correction and Ergonomics:</strong> Guidance to improve posture and workplace ergonomics
+              to
+              prevent and alleviate pain.<br /><br />
+
+              Our state-of-the-art facility is equipped with the latest technology and equipment to ensure you receive
+              the highest standard of care. We take a holistic approach to your treatment, considering your physical,
+              emotional, and lifestyle needs to create a customized therapy plan tailored specifically for
+              you.<br /><br />
+
+              At [Your Clinic Name], your health and well-being are our top priorities. Whether you're recovering from
+              an injury, managing a chronic condition, or looking to improve your physical performance, our dedicated
+              team is here to support you every step of the way.<br /><br />
+
+              Experience the difference at <strong>physiocare</strong> – where compassionate care meets clinical
+              excellence.
+              Contact us today to schedule your appointment and take the first step towards a healthier, more active
+              life.
+            </p>
+            <br />
           </div>
         </div>
       </div>
 
-
-      <script>
+      <!-- <script>
         const contentElements = document.querySelectorAll("#contentContainer b");
         let currentIndex = 0;
         let scrollTimer;
@@ -286,11 +276,11 @@
 
         document.addEventListener("scroll", throttle(handleScrollThrottled, 1000));
         showNextElementOnScroll();
-      </script>
+      </script> -->
     </div>
   </section>
 
-  <section style="display: flex; justify-content: space-between; align-items: center;">
+  <!-- <section style="display: flex; justify-content: space-between; align-items: center;">
     <div>
       <img class="aitoolsheading" src="assets/img/image07.webp" />
     </div>
@@ -299,77 +289,175 @@
       <h1 class="aitools">We use advance tools to understand <br />about the root cause of
         the pain</h1>
     </div>
-  </section>
+  </section> -->
 
-  <h2 style="display: flex; justify-content: center; margin-bottom: -80px;"><span>How it works</span></h2>
-  <section style="display: flex; justify-content: space-between; align-items: center;">
-    <img class="aitoolsheading" src="assets/img/howitworks01.png" />
-    <div>
-      <span class="howitworksspan">Clinical Examination</span>
-      <h1 class="howitworks">
-        Our senior physiotherapist makes you perform guided movements to identify the root cause of pain</h1>
+  <!-- ======== Services Section ============ -->
+  <section id="about" class="about section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2><span>Services</span></h2>
+      </div>
+      <section id="services" class="featured-services">
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box wider-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="our-services-image-container">
+                  <h4 class="title">Electro Therapy</h4>
+                  <img src="./assets/img/electrotheraphy.jpg" alt="Electro Therapy" class="service-image">
+                  <div class="overlay">
+                    <div class="text">Our team of skilled healthcare professionals has extensive experience in
+                      administering electrotherapy treatments, ensuring safe and effective care.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box wider-box" data-aos="fade-up" data-aos-delay="200">
+                <div class="our-services-image-container">
+                  <h4 class="title">Home Visit</h4>
+                  <img src="./assets/img/physio_home_visits.jpg" alt="Home Visit" class="service-image">
+                  <div class="overlay">
+                    <p class="text">
+                      At PhysioCare, we prioritize your well-being with our dedicated home visit services. Our team of
+                      experienced physiotherapists provides personalized care in the comfort of your home, ensuring
+                      convenience and comprehensive treatment.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box wider-box" data-aos="fade-up" data-aos-delay="300">
+                <div class="our-services-image-container">
+                  <h4 class="title">Exercise Therapy</h4>
+                  <img src="./assets/img/exercise.jpg" alt="Home Visit" class="service-image">
+                  <div class="overlay">
+                    <p class="text">Our team of certified exercise physiologists and rehabilitation specialists has the
+                      expertise and experience to design safe and effective exercise programs tailored to your unique
+                      needs and goals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
     </div>
   </section>
 
-  <section style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <div>
-      <span class="howitworksspan1">Personalized Treatment</span>
-      <h1 class="howitworks1">
-        Physio educates about the reason of the pain using 3D Tech. & creates a personalized treatment plan
-      </h1>
+  <!-- ======= How It Works Section ======= -->
+  <section id="how-it-works" class="how-it-works section-bg">
+    <div class="container" data-aos="fade-up">
+      <h2 style="display: flex; justify-content: center; margin-bottom: 20px;"><span>How it Works</span></h2>
+      <div class="tree-structure">
+        <div class="box-container">
+          <div class="box">
+            <span>Step 1</span>
+            <span>Initial Consultation:</span>
+            <p>Conduct a thorough initial assessment including medical history, physical examination, and
+              understanding patient goals.
+              Use assessment tools and diagnostic tests as needed.</p>
+          </div>
+          <div class="arrow"></div>
+        </div>
+        <div class="box-container">
+          <div class="box">
+            <span>Step 2</span>
+            <span>Personalized Treatment Plans:</span>
+            <p>Develop a personalized treatment plan based on the initial assessment.
+              Set specific, measurable, achievable, relevant, and time-bound (SMART) goals.</p>
+          </div>
+          <div class="arrow"></div>
+        </div>
+        <div class="box-container">
+          <div class="box">
+            <span>Step 3</span>
+            <span>Patient Education:</span>
+            <p>Educate patients about their condition, treatment options, and expected outcomes.
+              Provide information on exercises, lifestyle modifications, and preventive measures.</p>
+          </div>
+          <div class="arrow"></div>
+        </div>
+        <div class="box-container">
+          <div class="box">
+            <span>Step 4</span>
+            <span>Personalized Treatment Therapy Sessions:</span>
+            <p>Administer treatments as per the individualized plan, using techniques such as manual therapy, exercise
+              therapy, electrotherapy, etc.
+              Monitor patient progress and adjust treatment plans as needed.</p>
+          </div>
+          <div class="arrow"></div>
+        </div>
+        <div class="box-container">
+          <div class="box">
+            <span>Step 5</span>
+            <span>Patient Engagement:</span>
+            <p>Encourage active patient participation in their recovery process.
+              Provide home exercise programs and follow-up instructions.</p>
+          </div>
+          <div class="arrow"></div>
+        </div>
+        <div class="box-container">
+          <div class="box">
+            <span>Step 6</span>
+            <span>Regular Follow-Up:</span>
+            <p>Schedule regular follow-up appointments to monitor progress and adjust treatment plans.
+              Use follow-up sessions to reinforce patient education and engagement.</p>
+          </div>
+          <div class="arrow"></div>
+        </div>
+        <div class="box-container">
+          <div class="box">
+            <span>Step 7</span>
+            <span>Outcome Measurement:</span>
+            <p>Use standardized outcome measures to evaluate the effectiveness of treatments.
+              Collect patient feedback and satisfaction surveys to improve services.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <img class="aitoolsheading1" src="assets/img/howitworks02.png" />
-
   </section>
-
-  <section style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <img class="aitoolsheading2" src="assets/img/howitworks3.png" />
-    <div>
-      <span class="howitworksspan2">Physio-supervised Exercises</span>
-      <h1 class="howitworks2">
-        Our dedicated physio will sit with you one-on-one on a daily basis to guide you through your exercise plan and
-        ensure you're on track to achieve your health objectives</h1>
-    </div>
-  </section>
-
-
 
   <!-- ======= Testimonials Section ======= -->
-  <section class="testimonialContainer" data-aos="fade-down">
-    <h3 class="et_pb_text_1">Testimonials</h3>
-    <div id="clientTestimonialHeading">See What Our Client<br />Says About Us</div>
-    <div class="testimonial1">
+  <h2 class="testimonial-heading">Testimonials</h2>
+  <div class="testimonialContainer" data-aos="fade-down">
+    <div class="testimonial1 left">
+      <div class="testi-content"></div>
+    </div>
+
+    <div class="testimonial1 right">
       <div class="testi-content">
-        <div class="slide">
+        <div class="slidee">
           <p>Really a wonderful experience with Doctor Meghna .. she has great knowledge and she helped me a lot to
             relieve my neck pains and knee pains .. strongly recommend her work..she is excellent at her work.. thank
             you dr Meghna for making me pain free</p>
           <div class="details">
-            <span class="name">Manpreet&nbsp;Kaur</span>
+            <span class="name"><b>Manpreet&nbsp;Kaur</b></span>
           </div>
         </div>
-
-        <div class="slide">
-          <p> Very qualified physiotherapist with dedicated and without fuss attitude towards their client's issues.
-            They checked my medical history, analysed my mussels pain and the root cause and started their treatment. I
+        <div class="slidee">
+          <p>Very qualified physiotherapist with dedicated and without fuss attitude towards their client's issues. They
+            checked my medical history, analysed my mussels pain and the root cause and started their treatment. I
             started feeling better after three sessions and gradually my pain minimized from 8 to 10 days and now I feel
             more fit and aware towards my body. I would recommend it blindly to all those who are in pain and want to
             have effective long results in making them fit and happy.</p>
           <div class="details">
-            <span class="name">Haritha&nbsp;Chandrika</span>
+            <span class="name"><b>Haritha&nbsp;Chandrika</b></span>
           </div>
         </div>
-
-        <div class="slide">
-          <p>I have been suffering with frozen shoulder for almost 3 months .Dr Meghna Kaur treatment plan was
-            systematic solving one issue at a time then moving to the next .I definitely recommend her to anyone who
-            needs physio therapy .She is an amazing physiotherapist
-          </p>
+        <div class="slidee">
+          <p>I have been suffering with frozen shoulder for almost 3 months. Dr Meghna Kaur treatment plan was
+            systematic solving one issue at a time then moving to the next. I definitely recommend her to anyone who
+            needs physiotherapy. She is an amazing physiotherapist.</p>
           <div class="details">
-            <span class="name">Tejinder&nbsp;Kaur</span>
+            <span class="name"><b>Tejinder&nbsp;Kaur</b></span>
           </div>
         </div>
-
       </div>
       <div class="slide-icons-container">
         <div class="slide-icon active" data-index="0"></div>
@@ -377,57 +465,69 @@
         <div class="slide-icon" data-index="2"></div>
       </div>
     </div>
-  </section>
+  </div>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const testiContent = document.querySelector('.testi-content');
-      const slideIconsContainer = document.querySelector('.slide-icons-container');
+      const leftContainer = document.querySelector('.testimonial1.left .testi-content');
+      const rightContainer = document.querySelector('.testimonial1.right .testi-content');
       const slideIcons = document.querySelectorAll('.slide-icon');
-
+      const slides = document.querySelectorAll('.testimonial1.right .slidee');
       let currentIndex = 0;
+
+      // Initialize left container with the last slide
+      leftContainer.innerHTML = slides[slides.length - 1].outerHTML;
 
       function startSlideshow() {
         setInterval(() => {
-          currentIndex = (currentIndex + 1) % slideIcons.length;
+          currentIndex = (currentIndex + 1) % slides.length;
           updateSlide(currentIndex);
+          updateLeftContainer(currentIndex);
         }, 5000);
       }
-      function updateSlide(index) {
-        testiContent.style.transform = `translateX(-${index * 100}%)`;
 
+      function updateLeftContainer(index) {
+        // Update left container immediately without delay
+        leftContainer.innerHTML = slides[(index - 1 + slides.length) % slides.length].outerHTML;
+      }
+
+      function updateSlide(index) {
         // Update active class for icons
         slideIcons.forEach((icon, i) => {
           icon.classList.toggle('active', i === index);
         });
+
+        // Translate right side slides
+        rightContainer.style.transform = `translateX(-${index * 100}%)`;
       }
 
       slideIcons.forEach((icon, index) => {
         icon.addEventListener('click', () => {
           currentIndex = index;
           updateSlide(currentIndex);
+          updateLeftContainer(currentIndex);
         });
       });
+
       window.addEventListener('load', startSlideshow);
     });
   </script>
-  </ul>
-  </div>
-  </div>
 
+  <a href="https://g.co/kgs/pFFXvvm">
+    <section class="rating-section">
+      <div class="google-rating">GOOGLE RATING (4.9 stars)</div>
+      <div class="stars-container"></div>
+    </section>
+  </a>
+
+  <!-- ======= Contact Section ======= -->
   <div class="container" data-aos="fade-up">
     <div class="services-title">
-
-      <!-- ======= Contact Section ======= -->
       <section id="contact" class="contact">
         <div class="container" data-aos="fade-up">
-
           <div class="section-title">
             <h2>Contact Us</h2>
-            <!-- <h3><span>Contact Us</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> -->
-            <!-- </div> -->
-
             <div class="row" data-aos="fade-up" data-aos-delay="100">
               <div class="col-lg-6">
                 <div class="info-box mb-4">
@@ -457,7 +557,6 @@
                   <p>(+91) 99082 17712</p>
                 </div>
               </div>
-
             </div>
 
             <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -467,9 +566,6 @@
                   src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d121810.72484690629!2d78.36803883844972!3d17.431685364453877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bcb90ca27a15865%3A0x9fc3fcf16548ef7f!2sNo.%206-3-783%20To%20785%2C%20Lane%20Opp.%20to%20Big%20Bazar%2C%20Ameerpet%2C%20Hyderabad%2C%20Telangana%20500016!3m2!1d17.431702299999998!2d78.4504406!5e0!3m2!1sen!2sin!4v1712140994682!5m2!1sen!2sin"
                   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <!-- <iframe class="mb-4 mb-lg-0"
-              src="https://www.google.com/maps/dir/17.4589832,78.4183459/Apaar+Software+Technology+Services+Private+Limited,+Spring+View+Towers,+East+Srinivas+Nagar+Colony,+Sanjeeva+Reddy+Nagar+Office+Area,+Sanjeeva+Reddy+Nagar,+Hyderabad,+Telangana+500038/@17.4509638,78.4217727,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bcb91db961ab67d:0x395f20b4a027c272!2m2!1d78.4455268!2d17.4415628"
-              frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe> -->
               </div>
 
               <div class="col-lg-6">
@@ -498,35 +594,36 @@
                   <div class="text-center"><button type="submit">Send Message</button></div>
                 </form>
               </div>
-
             </div>
-
           </div>
-      </section>
-
-
-      <footer id="footer">
-        <div class="copyright">
-          Copyright @ 2024 physiocare</strong>. All Rights Reserved
         </div>
-      </footer>
+      </section>
+    </div>
+  </div>
 
-      <!-- End Footer -->
-      <div id="preloader"></div>
-      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-          class="bi bi-arrow-up-short"></i></a>
-      <!-- Vendor JS Files -->
-      <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-      <script src="assets/vendor/aos/aos.js"></script>
-      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-      <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-      <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- ====== Footer ======== -->
+  <footer id="footer">
+    <div class="copyright">
+      Copyright @ 2024 physiocare</strong>. All Rights Reserved
+    </div>
+  </footer>
 
-      <!-- Template Main JS File -->
-      <script src="assets/js/main.js"></script>
+  <!-- End Footer -->
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
