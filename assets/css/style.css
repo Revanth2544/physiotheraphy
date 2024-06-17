@@ -1,18 +1,5 @@
-/**
-* Template Name: BizLand
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-
-
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #444444;
 }
 
@@ -829,7 +816,8 @@ h6 {
 
 .about {
   display: flex;
-  align-items: stretch; /* Make columns stretch to match height */
+  align-items: stretch;
+  /* Make columns stretch to match height */
 }
 
 .about .container {
@@ -839,15 +827,14 @@ h6 {
 
 .row {
   display: flex;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.6;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 }
 
-
 .col-lg-6 {
-  flex: 1; /* Make columns flexible */
+  flex: 1;
+  /* Make columns flexible */
 }
 
 .img-fluid {
@@ -969,29 +956,6 @@ h6 {
   justify-content: center;
   align-items: center;
   display: inline-flex
-}
-
-
-.rating-section {
-  text-align: center;
-  padding: 50px 0;
-}
-
-.google-rating {
-  font-size: 5em;
-  color: #333;
-  margin-bottom: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.stars-container {
-  display: inline-block;
-  font-size: 6em;
-  color: #ffd700; /* Yellow color */
-}
-
-.stars-container::before {
-  content: '★★★★★'; /* Five stars */
 }
 
 
@@ -3087,6 +3051,7 @@ section {
   color: white;
   font-size: 16px;
   text-align: center;
+  font-family: math
 }
 
 /* How It Works */
@@ -3101,7 +3066,7 @@ section {
   font-weight: 500;
   justify-content: space-evenly;
   line-height: 1.6;
-  font-size: 14px;
+  font-size: 15px;
 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -3111,6 +3076,11 @@ section {
   align-items: center;
   margin: 10px;
   position: relative;
+}
+
+.box-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
 .box {
@@ -3128,6 +3098,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .box span {
@@ -3135,6 +3106,8 @@ section {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
+
 
 .arrow {
   width: 0;
@@ -3144,9 +3117,9 @@ section {
   border-left: 10px solid #333;
   position: absolute;
   right: -10px;
-  /* Adjust as needed */
   top: 50%;
   transform: translateY(-50%);
+
 }
 
 .box-container:last-child .arrow {
@@ -3163,4 +3136,161 @@ section {
   }
 }
 
-/* testimonials */
+.section-bg {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: math;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.zigzag-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.zigzag-row img {
+  max-width: 50%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.zigzag-text {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .zigzag-row {
+    flex-direction: column;
+  }
+
+  .zigzag-row img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* google rating */
+
+.rating-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.google-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.letter {
+  font-size: 100px;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.3s ease-out;
+}
+
+.g {
+  color: #4285F4;
+}
+
+.o1 {
+  color: #EA4335;
+}
+
+.o2 {
+  color: #FBBC05;
+}
+
+.g2 {
+  color: #4285F4;
+}
+
+.l {
+  color: #34A853;
+}
+
+.e {
+  color: #EA4335;
+}
+
+.letter:hover {
+  transform: scale(1.2);
+}
+
+.stars-container {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  margin-left: 20px;
+}
+
+.star {
+  width: 80px;
+  height: 80px;
+  background-color: #FFD700;
+  margin-left: 5px;
+  position: relative;
+  overflow: hidden;
+  clip-path: url(#star-clip);
+  transition: transform 0.3s ease-out;
+}
+
+.star:hover {
+  transform: scale(1.3);
+}
+
+.star.half::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-color: #ccc;
+  z-index: 1;
+}
+
+.star.half {
+  transition: transform 0.3s ease-out;
+}
+
+.star.half:hover {
+  transform: scale(1.3);
+}
+
+.rating{
+  transition: transform 0.3s ease-out;
+}
+
+.rating:hover{
+  transform: scale(1.2);
+}
